@@ -1,0 +1,121 @@
+:root {
+    /* text */
+    --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --SoftRed: hsl(14, 88%, 65%);
+
+    --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+    --DarkGrayishBlue: hsl(240, 6%, 50%);
+
+    /* Background */
+    --SoftViolet: hsl(273, 75%, 66%);
+    --SoftBlue: hsl(240, 73%, 65%);
+
+    /* Dividers */
+    --LightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: none
+}
+
+.card {
+    width: 80%;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.illustration-image img {
+    width: 100%;
+    margin-top: -55%;
+}
+
+.illustration-background img {
+    width: 100%;
+    margin-top: -30%;
+}
+
+.card h1 {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.question {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--LightGrayishBlue);
+    cursor: pointer;
+}
+
+.question-response {
+    display: none;
+    margin: 10px 0;
+}
+
+.question-show img {
+    rotate: 180deg;
+}
+
+.question-show .question-title{
+    font-weight: 700;
+}
+
+.question-show .question-response {
+    display: block;
+}
+
+@media (min-width: 768px) {
+
+    .box {
+        display: block;
+        margin-top: -50;
+        margin-right: -100px;
+        z-index: 1;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1000px;
+        overflow: hidden;
+    }
+
+    .illustration-image img {
+        margin-top: 0;
+        margin-left: -20%;
+    }
+
+    .illustration-background img {
+        margin-top: -85%;
+        margin-left: -25%;
+    }
+
+    .card h1 {
+        text-align: start;
+    }
+
+    .questions {
+        width: 90%;
+    }
+}
